@@ -1,0 +1,19 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>{% block title %}{% endblock %} - Simple Web</title>
+<nav>
+  <h1>PIC16B Simple Web</h1>
+  <!-- <b>Navigation:</b> -->
+  <ul>
+    <li><a href="{{ url_for('main') }}">Main</a></li>
+    <li><a href="{{ url_for('submit') }}">Submit a message</a></li>
+    <li><a href="{{ url_for('view_messages') }}">View messages</a></li>
+  </ul>
+</nav>
+<br><br>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% block content %}{% endblock %}
+</section>
